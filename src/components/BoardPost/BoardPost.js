@@ -12,17 +12,11 @@ export class BoardPost extends React.Component {
     }
 
     render() {
-        if (this.props.quizActive) {
-            return <Redirect to="/quiz" />; 
-
-        }
-        else {
-            return ( 
-                <div className="board-post" onClick={() => this.handlePostClick()}> 
-                    <img className="board-post-image" alt="planet image" src={this.props.quiz.image} />
-                </div>
-            )
-        }
+        return ( 
+            <div className="board-post" onClick={() => this.handlePostClick()}> 
+                <img className="board-post-image" alt="planet image" src={this.props.quiz.image} />
+            </div>
+        ); 
     }
 }
 
