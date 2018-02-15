@@ -22,3 +22,25 @@
     display: flex; 
     align-items: center; 
 }
+
+.quiz-question {
+    margin-bottom: 10px; 
+}
+
+.quiz-question-label {
+    position: relative; 
+    top: 2px; 
+}
+
+.quiz-title {
+    margin-top: 0px; 
+}
+
+.quiz-button-submit {
+    margin-top: 20px; 
+    color: white; 
+    background-color: black; 
+    padding: 10px 15px; 
+    width: 100%; 
+    font-size: 14px; 
+}

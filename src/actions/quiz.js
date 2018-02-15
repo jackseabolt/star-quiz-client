@@ -12,10 +12,14 @@ export const setCurrentQuizStatus = quiz => ({
     quiz
 }); 
 
+export const CLEAR_QUIZ = 'CLEAR_QUIZ'; 
+export const clearQuiz = () => ({
+    type: CLEAR_QUIZ, 
+}); 
+
 
 // THUNK ACTIONS
 
-export const GET_ALL_QUIZES = 'GET_ALL_QUIZES'; 
 export const getAllQuizes = () => dispatch => {
     return fetch('https://star-quizes-api.herokuapp.com/quiz/', 
         {
@@ -31,10 +35,8 @@ export const getAllQuizes = () => dispatch => {
         return Promise.reject();  
     }); 
 }; 
-
-export const GET_NEW_QUIZ = 'GET_NEW_QUIZ'; 
+ 
 export const getNewQuiz = title => dispatch => {
-    console.log("TITLE: ", title)
     return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/question/new`, 
         {
             method: 'GET'
@@ -50,4 +52,14 @@ export const getNewQuiz = title => dispatch => {
         }
     })
     .catch(err => console.error(err)); 
+}
+
+export const deleteSession = id => dispatch => {
+    return fetch(`https://star-quizes-api.herokuapp.com/session/${id}`, 
+        {
+            method: 'DELETE'
+        }
+    )
+    .then(() => dispatch(clearQuiz())) 
+    .catch(err => console.error(err))
 }
