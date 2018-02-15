@@ -25,7 +25,8 @@ export class Board extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    quizes: state.quizes? state.quizes : []
+    quizes: state.quizes? state.quizes : [], 
+    answers: state.answers
 }); 
 
 export default connect(mapStateToProps)(Board); 
