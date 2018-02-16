@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
 import { Redirect } from 'react-router-dom'; 
-import { clearQuiz, answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz'; 
+import { answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz'; 
 import './Quiz.css'; 
 
 export class Quiz extends React.Component {

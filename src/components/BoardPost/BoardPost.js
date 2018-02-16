@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import './BoardPost.css'; 
 import { getNewQuiz } from '../../actions/quiz'; 
-import { Redirect } from 'react-router-dom';
 
 export class BoardPost extends React.Component {
 
@@ -14,7 +13,7 @@ export class BoardPost extends React.Component {
     render() {
         return ( 
             <div className="board-post" onClick={() => this.handlePostClick()}> 
-                <img className="board-post-image" alt="planet image" src={this.props.quiz.image} />
+                <img className="board-post-image" alt="planet" src={this.props.quiz.image} />
             </div>
         ); 
     }
