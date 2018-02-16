@@ -1,0 +1,23 @@
+.board-header {
+    width: 100%; 
+    background-color: rgb(20, 20, 20); 
+    height: 200px; 
+    margin-bottom: none;
+    padding: 50px 100px;   
+}
+
+.board-header-header {
+    font-family: 'Oswald', sans-serif;
+    margin: 0px; 
+    color: white;  
+    font-size: 30px; 
+}
+
+.board-header-paragraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px; 
+    color: rgb(192, 192, 192); 
+    font-size: 20px; 
+    margin-top: 15px;
+    line-height: 30px; 
+}
