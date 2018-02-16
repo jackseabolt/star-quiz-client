@@ -54,6 +54,25 @@ export const getNewQuiz = title => dispatch => {
     .catch(err => console.error(err)); 
 }
 
+export const answerQuiz = (title, answer, sessionId) => dispatch => {
+    console.log(title, answer, sessionId)
+    return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/answer/${sessionId}`, 
+        {
+            method: 'POST'
+        }
+    )
+    .then(res => res.json())
+    .then(quiz => {
+        console.log("HERE IS THE QUIZ", quiz)
+        if(quiz.quizLength) {
+            return dispatch(setCurrentQuizStatus(quiz))
+        } else {
+            return console.error('Quiz has no questions!')
+        }
+    })
+    .catch(err => console.error(err)); 
+}
+
 export const deleteSession = id => dispatch => {
     return fetch(`https://star-quizes-api.herokuapp.com/session/${id}`, 
         {
