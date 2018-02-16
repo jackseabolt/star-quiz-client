@@ -11,6 +11,8 @@ export class Welcome extends React.Component {
                         <iframe title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+                <h1 className="welcome-title">"The Universe is under no obligation <br /> to make sense to you."<br /><br />~ Neil deGrasse Tyson</h1>
+                
             </div>
         )
     }
