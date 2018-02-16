@@ -1,5 +1,13 @@
 .header {
     width: 100%; 
     background-color: rgb(20, 20, 20); 
-    height: 100px; 
+ 
+}
+
+.header-title {
+    font-family: 'Oswald', sans-serif;
+    margin: 0px; 
+    color: white; 
+    padding: 20px 50px 25px; 
+    font-size: 30px; 
 }

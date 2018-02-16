@@ -58,7 +58,13 @@ export const answerQuiz = (title, answer, sessionId) => dispatch => {
     console.log(title, answer, sessionId)
     return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/answer/${sessionId}`, 
         {
-            method: 'POST'
+            method: 'POST', 
+            body: JSON.stringify({
+                answer
+            }), 
+            headers: {
+               'Content-Type': 'application/json' 
+            }
         }
     )
     .then(res => res.json())

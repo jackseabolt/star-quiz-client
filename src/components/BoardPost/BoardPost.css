@@ -1,22 +1,21 @@
 .board-post {
     background-color: rgb(70, 70, 70); 
     width: 25%; 
-    padding: 0px; 
-    margin-left: auto; 
-    margin-right: auto; 
+    padding: 0px;  
     margin-bottom: 0px; 
     display: inline-block; 
+    cursor: pointer; 
 }
 
 .board-post-image {
-    width: 100%; 
+    width: 100%;
+    padding: 0px; 
+    margin: 0px; 
 }
-
-
 
 /* TABLET STYLES */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     .board-post {
         width: 50%; 
     }

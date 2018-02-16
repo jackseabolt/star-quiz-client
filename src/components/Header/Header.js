@@ -6,7 +6,7 @@ export class Header extends React.Component {
     render() {
         return ( 
             <div className="header"> 
-                Header
+                <h1 className="header-title">StarQuiz</h1>
             </div>
         )
     }
