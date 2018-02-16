@@ -18,7 +18,7 @@ export class Board extends React.Component {
         return ( 
             <div className="board"> 
                 { boardPosts }
-                Board
+
             </div>
         )
     }

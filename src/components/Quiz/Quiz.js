@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
 import { Redirect } from 'react-router-dom'; 
-import { clearQuiz } from '../../actions/quiz'; 
+import { clearQuiz, answerQuiz  } from '../../actions/quiz'; 
 import './Quiz.css'; 
 
 export class Quiz extends React.Component {
@@ -11,15 +11,17 @@ export class Quiz extends React.Component {
         this.props.dispatch(clearQuiz()); 
     }
 
-    handleSubmit(event) {
-        event.preventDefault(); 
+    handleSubmit(event) {  
+        event.preventDefault();
+        const { answer } = this.form; 
+        this.props.dispatch(answerQuiz(this.props.title, answer.value, this.props.sessionId)) 
     }
     
     render() {  
         
         let answers = this.props.answers.map((answer, idx) => (
-            <div className="quiz-question">
-                <input type="radio" name="answer" value={idx} /> <span className="quiz-question-label">{answer}</span>
+            <div key={idx} className="quiz-question">
+                <input type="radio" name="answer" value={answer} /> <span className="quiz-question-label">{answer}</span>
             </div>
         )); 
 
@@ -29,7 +31,7 @@ export class Quiz extends React.Component {
                     <div className="quiz-main">
                         <h2 className="quiz-title">{this.props.title} Quiz</h2>
                         <h4>QUESTION: {this.props.currentQuestion}</h4>
-                        <form onSubmit={e => this.handleSubmit(e)}>
+                        <form className="quiz-form" onSubmit={e => this.handleSubmit(e)} ref={form => this.form = form}>
                             {answers}
                             <button className="quiz-button-submit">Submit</button>
                         </form>
@@ -48,7 +50,8 @@ const mapStateToProps = state => ({
     usingQuiz: state.currentQuestion, 
     answers: state.answers, 
     currentQuestion: state.currentQuestion, 
-    title: state.currentQuiz, 
+    title: state.currentQuiz,
+    sessionId: state.sessionId 
 
 }); 
 

@@ -1,11 +1,12 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
+import './Footer.css'; 
 
 export class Footer extends React.Component {
     render() {
         return ( 
-            <div> 
-                Footer
+            <div className="footer"> 
+                
             </div>
         )
     }
