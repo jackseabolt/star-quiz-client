@@ -28,11 +28,13 @@ export class Quiz extends React.Component {
 
         // Response text colors
         const responseClasses = [];
-        if (this.props.response === "You're right!") {
-            responseClasses.push('quiz-right-response')
-        }
-        else {
-            responseClasses.push('quiz-wrong-response');
+        if (this.props.response) {
+            if (this.props.response.includes("You're right!")) {
+                responseClasses.push('quiz-right-response')
+            }
+            else {
+                responseClasses.push('quiz-wrong-response');
+            }
         }
         
         // Answer radio buttons
