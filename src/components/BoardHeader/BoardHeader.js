@@ -16,7 +16,7 @@ export class BoardHeader extends React.Component {
 
 const mapStateToProps = state => ({
 
-}); 
+});  
 
 export default connect(mapStateToProps)(BoardHeader); 
 
