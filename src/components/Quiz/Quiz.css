@@ -6,7 +6,8 @@
     background-color: rgb(211, 211, 211); 
     padding: 50px; 
     z-index: 21;
-    color: rgb(68, 68, 68); 
+    color: rgb(68, 68, 68);
+    transition: 1s;  
 }
 
 .quiz-backdrop {
