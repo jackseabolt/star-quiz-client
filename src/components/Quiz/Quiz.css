@@ -76,3 +76,8 @@
     text-align: center; 
     color: rgb(148, 77, 77); 
 }
+
+.quiz-right-response {
+    text-align: center; 
+    color: rgb(90, 143, 108); 
+}

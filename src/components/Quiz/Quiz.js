@@ -23,6 +23,17 @@ export class Quiz extends React.Component {
     }
     
     render() {  
+
+
+        // WORKING HERE
+        const responseClasses = [];
+        if (this.props.response === "You're right!") {
+            responseClasses.push('quiz-right-response')
+        }
+        else {
+            responseClasses.push('quiz-wrong-response');
+        }
+        // WORKING HERE
         
         let answers = this.props.answers.map((answer, idx) => (
             <div key={idx} className="quiz-question">
@@ -30,7 +41,7 @@ export class Quiz extends React.Component {
             </div>
         )); 
 
-        let correctAnswer = this.props.response ? <h4 className="quiz-wrong-response">{this.props.response}</h4> : <h4>QUESTION: {this.props.currentQuestion}</h4>; 
+        let correctAnswer = this.props.response ? <h4 className={responseClasses.join(' ')}>{this.props.response}</h4> : <h4>QUESTION: {this.props.currentQuestion}</h4>; 
 
         let button = this.props.correctAnswer ? <button className="quiz-button-submit">Next</button> : <button className="quiz-button-submit">Submit</button>; 
 
