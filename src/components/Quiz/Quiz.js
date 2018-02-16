@@ -43,7 +43,7 @@ export class Quiz extends React.Component {
         )); 
 
         // Question or answer
-        let correctAnswer = this.props.response ? <h4 className={responseClasses.join(' ')}>{this.props.response}</h4> : <h4>QUESTION: {this.props.currentQuestion}</h4>; 
+        let correctAnswer = this.props.response ? <h4 className={responseClasses.join(' ')}>{this.props.response}</h4> : <p><strong>QUESTION:</strong> {this.props.currentQuestion}</p>; 
 
         // Submit or next 
         let button = this.props.correctAnswer ? <button className="quiz-button-submit">Next</button> : <button className="quiz-button-submit">Submit</button>; 
