@@ -85,3 +85,8 @@
     text-align: center; 
     color: rgb(90, 143, 108); 
 }
+
+.quiz-score {
+    text-align: center; 
+    margin-top: 20px; 
+}
