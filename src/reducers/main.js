@@ -5,7 +5,9 @@ const initialState = {
     answers: [], 
     currentQuestion: null, 
     currentQuiz: null, 
-    sessionId: null
+    sessionId: null, 
+    correctAnswer: null,
+    response: null 
 }
 
 export default function mainReducer(state = initialState, action) {
@@ -20,7 +22,9 @@ export default function mainReducer(state = initialState, action) {
             answers: action.quiz.answers,
             currentQuestion: action.quiz.question, 
             sessionId: action.quiz.sessionId, 
-            currentQuiz: action.quiz.title
+            currentQuiz: action.quiz.title, 
+            correctAnswer: action.quiz.correct_answer,
+            response: action.quiz.response
         })
     }
     else if (action.type === CLEAR_QUIZ) {
