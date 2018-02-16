@@ -37,7 +37,8 @@
 }
 
 .quiz-title {
-    margin-top: 0px; 
+    margin-top: 0px;
+    margin-bottom: 30px;  
 }
 
 .quiz-button-submit {
