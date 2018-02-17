@@ -1,6 +1,8 @@
 .header {
     width: 100%; 
     background-color: black; 
+    position: fixed; 
+    top: 0px; 
 }
 
 .header-title {
