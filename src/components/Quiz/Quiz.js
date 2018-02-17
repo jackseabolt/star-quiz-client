@@ -5,6 +5,18 @@ import { answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz';
 import './Quiz.css'; 
 
 export class Quiz extends React.Component {
+
+    constructor(props) {
+        super(props); 
+        // local state for local component changes
+        this.state = {
+            started: false
+        }
+    }
+
+    handleStart() {
+        this.setState({started: true})
+    }
     
     handleClose() {
         this.props.dispatch(deleteSession(this.props.sessionId))
@@ -50,9 +62,29 @@ export class Quiz extends React.Component {
         // Submit or next 
         let button = this.props.correctAnswer ? <button className="quiz-button-submit">Next</button> : <button className="quiz-button-submit">Submit</button>; 
 
-        console.log("CONTINUE:", this.props.continue)
         if(!this.props.continue) {
             button = <button className="quiz-button-submit">End</button>
+        }
+
+        // content - is quiz started? 
+
+        let content; 
+        if(this.state.started) {
+            content = <div>
+                <h2 className="quiz-title">{this.props.title} Quiz</h2>
+                    { correctAnswer }
+                    <form className="quiz-form" onSubmit={e => this.handleSubmit(e)} ref={form => this.form = form}>
+                        { answers }
+                        { button }
+                    </form>
+                </div>
+        } else {
+            content = <div>
+                <h2 className="quiz-title">{this.props.title} Quiz</h2>
+                <p>So you think you know about {this.props.title}? This quiz contains {this.props.quizLength}
+                 questions that will test your knowledge.<br />Good luck!</p>
+                 <button className="quiz-button-submit" onClick={() => this.handleStart()}>Start</button>
+            </div>
         }
 
         // Is quiz activated? 
@@ -63,13 +95,7 @@ export class Quiz extends React.Component {
                         <div className="quiz-close" onClick={() => this.handleClose()}>
                             <i className="fas fa-times quiz-close-icon"></i>
                         </div>
-                        <h2 className="quiz-title">{this.props.title} Quiz</h2>
-                        { correctAnswer }
-                        <form className="quiz-form" onSubmit={e => this.handleSubmit(e)} ref={form => this.form = form}>
-                            { answers }
-                            { button }
-                        </form>
-                        
+                        { content } 
                     </div>
                 </div>
             )  
