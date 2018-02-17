@@ -12,14 +12,14 @@ export class Footer extends React.Component {
                     their websites for more space news!</p>
                 </div>
                 <div className="footer-container">
-                    <a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.nasa.gov/">
                         <img className="footer-nasa-logo" src={require('../../images/NASA.png')} alt="logo" />
                     </a>
                     
-                    <a href="http://www.spacex.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="http://www.spacex.com/">
                         <img className="footer-spacex-logo" src={require('../../images/SpaceX.png')} alt="logo" />
                     </a>
-                    <a href="https://www.esa.int/ESA" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.esa.int/ESA">
                         <img className="footer-esa-logo" src={require('../../images/ESA.png')} alt="logo" />
                     </a>
                 </div>
