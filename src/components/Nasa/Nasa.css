@@ -1,0 +1,34 @@
+.nasa {
+    width: 100%; 
+    background-color: white; 
+    height: 400px;
+    margin-bottom: none; 
+    padding: 70px 30px;   
+}
+
+
+.nasa-container {
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px 0px;
+    text-align: center;   
+}
+
+.nasa-paragraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px; 
+    color: rgb(192, 192, 192); 
+    font-size: 20px; 
+    margin-top: 15px;
+    line-height: 30px; 
+}
+
+@media screen and (max-width: 900px) {
+    .nasa-container {
+        width: 100%; 
+    } 
+
+}
+
+
