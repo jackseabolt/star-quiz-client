@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer'; 
 import Board from '../Board/Board'; 
 import Quiz from '../Quiz/Quiz'; 
+import Nasa from '../Nasa/Nasa';
 import Welcome from '../Welcome/Welcome';
 import BoardHeader from '../BoardHeader/BoardHeader';
 import {Route, withRouter} from 'react-router-dom';
@@ -23,6 +24,7 @@ export class App extends Component {
         { quiz }
         <Header />
         <Welcome />
+        <Nasa />
         <BoardHeader />
         <Route exact path="/" component={Board} />
         <Route exact path="/quiz" component={Quiz} />
