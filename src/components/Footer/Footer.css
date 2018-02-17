@@ -1,7 +1,86 @@
 .footer {
     width: 100%; 
     background-color: rgb(20, 20, 20); 
-    height: 200px; 
     margin-bottom: none; 
-    border-top: 3px solid rgb(39, 39, 39);  
+    border-top: 3px solid rgb(39, 39, 39);
+    padding: 70px 30px;   
+}
+
+.footer-nasa-logo {
+    width: 200px;  
+    padding: 30px;
+    margin-left: auto; 
+    margin-right: auto;
+    cursor: pointer;   
+}
+
+.footer-spacex-logo {
+    width: 300px;  
+    padding: 30px; 
+    position: relative; 
+    top: -47px; 
+    left: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
+    cursor: pointer;  
+}
+
+.footer-esa-logo {
+    width: 270px;  
+    padding: 30px; 
+    position: relative; 
+    top: -47px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative; 
+    top: 25px;
+    cursor: pointer;  
+}
+
+.footer-container-top {
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 1500px; 
+    width: 80%; 
+    text-align: center;   
+}
+
+.footer-container {
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 50px 0px;
+    text-align: center;   
+}
+
+.footer-header {
+    font-family: 'Oswald', sans-serif;
+    margin: 0px; 
+    color: white;  
+    font-size: 30px; 
+}
+
+.footer-paragraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px; 
+    color: rgb(192, 192, 192); 
+    font-size: 20px; 
+    margin-top: 15px;
+    line-height: 30px; 
+}
+
+@media screen and (max-width: 900px) {
+    .footer-container {
+        width: 100%; 
+    } 
+    .footer-container-top {
+        width: 80%; 
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .footer-container-top {
+        width: 95%; 
+    }
 }
