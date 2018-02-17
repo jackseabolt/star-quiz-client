@@ -12,7 +12,7 @@ export class Welcome extends React.Component {
                     </div>
                 </div>
                 <div className="welcome-title-container">
-                <h1 className="welcome-title">"The Universe is under no obligation <br /> to make sense to you."<br /><br /></h1>
+                <h1 className="welcome-title">"The Universe is under no obligation <br /> to make sense to you."<br /></h1>
                 <h3 className="welcome-title-sub">~ Neil deGrasse Tyson</h3>
                 </div>
             </div>
