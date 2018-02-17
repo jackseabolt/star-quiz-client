@@ -81,8 +81,8 @@ export class Quiz extends React.Component {
         } else {
             content = <div>
                 <h2 className="quiz-title">{this.props.title} Quiz</h2>
-                <p>So you think you know about {this.props.title}? This quiz contains {this.props.quizLength}
-                 questions that will test your knowledge.<br />Good luck!</p>
+                <p>So you think you know about {this.props.title}? This quiz contains {this.props.quizLength} questions 
+                that will test your knowledge.<br /><br />Good luck!</p>
                  <button className="quiz-button-submit" onClick={() => this.handleStart()}>Start</button>
             </div>
         }
