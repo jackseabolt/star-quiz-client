@@ -13,6 +13,10 @@
     transition: 0.3s;   
 }
 
+.quiz-p {
+    line-height: 20px; 
+}
+
 .quiz-backdrop {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%; 

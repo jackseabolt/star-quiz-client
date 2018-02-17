@@ -57,7 +57,7 @@ export class Quiz extends React.Component {
         )); 
 
         // Question or answer
-        let correctAnswer = this.props.response ? <div><h4 className={responseClasses.join(' ')}>{this.props.response}</h4><h3 className="quiz-score">{this.props.score}/{this.props.currentIndex}</h3></div> : <p><strong>QUESTION:</strong> {this.props.currentQuestion}</p>; 
+        let correctAnswer = this.props.response ? <div><h4 className={responseClasses.join(' ')}>{this.props.response}</h4><h3 className="quiz-score">{this.props.score}/{this.props.currentIndex}</h3></div> : <p className="quiz-p"><strong>QUESTION:</strong> {this.props.currentQuestion}</p>; 
 
         // Submit or next 
         let button = this.props.correctAnswer ? <button className="quiz-button-submit">Next</button> : <button className="quiz-button-submit">Submit</button>; 
@@ -81,7 +81,7 @@ export class Quiz extends React.Component {
         } else {
             content = <div>
                 <h2 className="quiz-title">{this.props.title} Quiz</h2>
-                <p>So you think you know about {this.props.title}? This quiz contains {this.props.quizLength} questions that will test your knowledge.<br /><br />
+                <p className="quiz-p">So you think you know about {this.props.title}? This quiz contains {this.props.quizLength} questions that will test your knowledge.<br /><br />
                 Good luck!</p>
                  <button className="quiz-button-submit" onClick={() => this.handleStart()}>Start</button>
             </div>
