@@ -1,0 +1,55 @@
+.nasa-photo-backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%; 
+    width: 100%; 
+    margin: 0px; 
+    z-index: 20; 
+    top: 0px; 
+    bottom: 0px; 
+    left: 0px; 
+    right: 0px; 
+    position: fixed;
+    display: flex; 
+    align-items: center; 
+}
+
+.nasa-photo-main {
+    max-width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 0px;
+    background-color: rgb(0, 0, 0); 
+    padding: 0px 0px 20px 0px; 
+    z-index: 21;
+    color: rgb(68, 68, 68);
+    transition: 1s;
+    box-shadow: 0px 0px 40px rgb(29, 29, 29); 
+    border-radius: 3px;
+    transition: 0.3s;
+    max-height: 100%;    
+}
+
+.nasa-photo-close-icon {
+ color: white
+}
+
+.nasa-photo-close {
+    float: right; 
+    opacity: 0.6; 
+    font-size: 20px; 
+    position: relative; 
+    top: 40px; 
+    right: 30px; 
+    transition: 0.3s; 
+    cursor: pointer;
+}
+
+.nasa-photo-close:hover {
+    opacity: 0.8; 
+}
+
+.nasa-photo {
+    width: 100%;
+    margin: 0px; 
+    height: 100%;  
+}
