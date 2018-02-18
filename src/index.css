@@ -7,4 +7,57 @@ body {
   background-color: rgb(70, 70, 70); 
 }
 
+.global-container {
+  margin-left: auto; 
+  margin-right: auto; 
+  max-width: 1500px; 
+  width: 70%;
+  padding: 70px 0px 80px; 
+}
+
+/* TEXT FOR DARK BACKGROUNDS */
+
+.global-header-darkback {
+  font-family: 'Oswald', sans-serif;
+  margin: 0px; 
+  color: white;  
+  font-size: 30px; 
+}
+
+.global-paragraph-darkback {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px; 
+  color: rgb(192, 192, 192); 
+  font-size: 20px; 
+  margin-top: 15px;
+  line-height: 30px; 
+}
+
+
+/* TEXT FOR LIGHT BACKGROUNDS */
+
+.global-header-lightback {
+  font-family: 'Oswald', sans-serif;
+  margin: 0px; 
+  color: rgb(58, 59, 68);  
+  font-size: 30px; 
+}
+
+.global-paragraph-lightback {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px; 
+  color: rgb(139, 139, 139); 
+  font-size: 20px; 
+  margin-top: 15px;
+  line-height: 30px; 
+}
+
+/* TABLET STYLES */
+
+@media screen and (max-width: 850px) {
+  .global-container {
+      width: 80%; 
+  }
+}
+
 

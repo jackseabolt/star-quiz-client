@@ -1,18 +1,7 @@
 .nasa {
     width: 100%; 
     background-color: white; 
-    height: 400px;
-    margin-bottom: none; 
-    padding: 70px 30px;   
-}
-
-
-.nasa-container {
-    width: 80%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding: 20px 0px;
-    text-align: center;   
+    margin-bottom: none;   
 }
 
 .nasa-paragraph {
@@ -24,11 +13,62 @@
     line-height: 30px; 
 }
 
-@media screen and (max-width: 900px) {
-    .nasa-container {
-        width: 100%; 
-    } 
-
+.nasa-image { 
+    width: 100%; 
+    margin-top: 30px; 
 }
+
+.nasa-subpic {
+    font-size: 16px; 
+    color: grey;
+    line-height: 20px;  
+}
+
+.nasa-title-container {
+    background-color: #b7bccf; 
+    height: 45px;  
+    display: inline-block;
+    padding: 0px 20px 0px 40px;  
+    width: 230px; 
+    margin: 0px; 
+    position: relative; 
+    top: -18px; 
+}
+
+.nasa-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px; 
+    color: white; 
+    padding-top: 10px; 
+    margin: 0px;
+    display: inline-block;
+}
+
+.nasa-title-container-end {
+    height: 45px;  
+    display: inline-block;
+}
+
+.nasa-flex {
+    display: flex; 
+}
+
+.nasa-flex-1 {
+    flex: 1; 
+}
+
+.nasa-flex-2 {
+    flex: 2; 
+}
+
+.nasa-flex-padding {
+    padding-left: 70px; 
+}
+
+.nasa-flex-grey {
+    background-color: rgb(243, 243, 243); 
+    padding: 50px; 
+}
+
 
 
