@@ -17,6 +17,12 @@ export const clearQuiz = () => ({
     type: CLEAR_QUIZ, 
 }); 
 
+export const SET_NASA_IMAGE = 'SET_NASA_IMAGE'; 
+export const setNasaImage = imageData => ({
+    type: SET_NASA_IMAGE, 
+    imageData
+}); 
+
 
 // THUNK ACTIONS
 
@@ -105,4 +111,16 @@ export const deleteSession = id => dispatch => {
     )
     .then(() => dispatch(clearQuiz())) 
     .catch(err => console.error(err))
+}
+
+export const getNasaImage = () => dispatch => {
+    return fetch('https://api.nasa.gov/planetary/apod?api_key=IBNbXHbyn8pC2k9EVxumOUauFaccdzinCD0WJcSA', 
+    {
+        method: 'GET'
+    })
+    .then(res => res.json())
+    .then(imageData => {
+        console.log(imageData)
+        dispatch(setNasaImage(imageData))
+    }); 
 }

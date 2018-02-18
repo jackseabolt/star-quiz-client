@@ -1,4 +1,4 @@
-import { SET_ALL_QUIZES, SET_CURRENT_QUIZ_STATUS, CLEAR_QUIZ } from '../actions/quiz'; 
+import { SET_ALL_QUIZES, SET_CURRENT_QUIZ_STATUS, CLEAR_QUIZ, SET_NASA_IMAGE } from '../actions/quiz'; 
 
 const initialState = {
     quizes: null,
@@ -11,7 +11,10 @@ const initialState = {
     continue: true,
     score: null, 
     quizLength: null, 
-    currentIndex: null
+    currentIndex: null,
+    nasaImageUrl: null, 
+    nasaImageExplanation: null, 
+    nasaImageTitle: null
 }
 
 export default function mainReducer(state = initialState, action) {
@@ -48,6 +51,13 @@ export default function mainReducer(state = initialState, action) {
             quizLength: null, 
             score: null, 
             currentIndex: null
+        })
+    }
+    else if (action.type === SET_NASA_IMAGE) {
+        return Object.assign({}, state, {
+            nasaImageUrl: action.imageData.url, 
+            nasaImageExplanation: action.imageData.explanation, 
+            nasaImageTitle: action.imageData.title
         })
     }
     return state;
