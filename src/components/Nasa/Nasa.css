@@ -15,7 +15,7 @@
 
 .nasa-image { 
     width: 100%; 
-    margin-top: 30px; 
+    margin-top: 20px; 
 }
 
 .nasa-subpic {
@@ -50,24 +50,47 @@
 }
 
 .nasa-flex {
-    display: flex; 
+    display: flex;  
 }
 
-.nasa-flex-1 {
-    flex: 1; 
+.nasa-section-right {
+    width: 500px; 
+    display: inline-block; 
 }
 
-.nasa-flex-2 {
-    flex: 2; 
+.nasa-section-left {
+    width: calc(100% - 500px); 
+    display: inline-block;
 }
 
 .nasa-flex-padding {
     padding-left: 70px; 
+    padding-right: none; 
 }
 
 .nasa-flex-grey {
     background-color: rgb(243, 243, 243); 
     padding: 50px; 
+}
+
+@media screen and (max-width: 1200px) {
+    .nasa-flex {
+        display: block;  
+    }
+    .nasa-flex-padding {
+        padding-left: 0px; 
+        padding-right: none;
+        padding-top: 60px;   
+    }
+    .nasa-section-right {
+        width: 100%; 
+        display: block; 
+    }
+    
+    .nasa-section-left {
+        width: 100%;
+        display: block;
+    }
 }
 
 

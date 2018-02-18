@@ -23,6 +23,11 @@ export const setNasaImage = imageData => ({
     imageData
 }); 
 
+export const TOGGLE_NASA_IMAGE = 'TOGGLE_NASA_IMAGE'; 
+export const toggleNasaImage = () => ({
+    type: TOGGLE_NASA_IMAGE, 
+}); 
+
 
 // THUNK ACTIONS
 
