@@ -49,7 +49,7 @@
 .quiz-button-submit {
     margin-top: 30px; 
     color: white; 
-    background-color: rgb(31, 31, 36); 
+    background-color: rgb(49, 49, 58); 
     padding: 20px 15px; 
     width: 100%; 
     font-size: 17px;
@@ -59,13 +59,13 @@
 }
 
 .quiz-button-submit:hover {
-    background-color: rgb(49, 49, 58); 
+    background-color: rgb(31, 31, 36); 
 } 
 
 .quiz-button-start {
     margin-top: 30px; 
     color: white; 
-    background-color: rgb(94, 116, 95); 
+    background-color: rgb(122, 139, 122); 
     padding: 20px 15px; 
     width: 100%; 
     font-size: 17px;
@@ -75,7 +75,7 @@
 }
 
 .quiz-button-start:hover {
-    background-color: rgb(79, 97, 79); 
+    background-color: rgb(97, 112, 99); 
 } 
 
 .quiz-form {
@@ -111,3 +111,4 @@
     text-align: center; 
     margin-top: 20px; 
 }
+

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import { Redirect } from 'react-router-dom'; 
 import { answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz'; 
+import Score from '../Score/Score'; 
 import './Quiz.css'; 
 
 export class Quiz extends React.Component {
@@ -57,7 +58,7 @@ export class Quiz extends React.Component {
         )); 
 
         // Question or answer
-        let correctAnswer = this.props.response ? <div><h4 className={responseClasses.join(' ')}>{this.props.response}</h4><h3 className="quiz-score">{this.props.score}/{this.props.currentIndex}</h3></div> : <p className="quiz-p"><strong>QUESTION:</strong> {this.props.currentQuestion}</p>; 
+        let correctAnswer = this.props.response ? <div className="global-center"><h4 className={responseClasses.join(' ')}>{this.props.response}</h4><Score /></div>: <p className="quiz-p"><strong>QUESTION:</strong> {this.props.currentQuestion}</p>; 
 
         // Submit or next 
         let button = this.props.correctAnswer ? <button className="quiz-button-submit">Next</button> : <button className="quiz-button-submit">Submit</button>; 
