@@ -15,6 +15,10 @@ body {
   padding: 70px 0px 80px; 
 }
 
+.global-center {
+  text-align: center; 
+}
+
 /* TEXT FOR DARK BACKGROUNDS */
 
 .global-header-darkback {

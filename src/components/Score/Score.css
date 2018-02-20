@@ -1,0 +1,17 @@
+.score-container {
+    background-color: rgb(168, 168, 168); 
+    border-radius: 5px; 
+    padding: 15px 30px; 
+    display: inline-block; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 10px; 
+    margin-bottom: 20px;  
+}
+
+.score-text {
+    margin: 0px; 
+    color: white; 
+    text-align: center;
+    /* font-family: 'Roboto Condensed', sans-serif;  */
+}

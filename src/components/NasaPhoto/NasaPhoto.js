@@ -19,8 +19,7 @@ export class NasaPhoto extends React.Component {
                         <div className="nasa-photo-close" onClick={() => this.handleClose()}>
                             <i className="fas fa-times nasa-photo-close-icon"></i>
                         </div>
-                        <img className="nasa-photo" src={this.props.nasaImageUrl} />
-                        {/* <p className="nasa-subpic"><strong>{this.props.nasaImageTitle}</strong> - {this.props.nasaImageExplanation}</p> */}
+                        <img className="nasa-photo" alt={this.props.nasaImageTitle} src={this.props.nasaImageUrl} />
                     </div>
                 </div>
             )  
