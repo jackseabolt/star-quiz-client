@@ -1,7 +1,4 @@
 
-console.log(process.env)
-
-
 if (process.env.NODE_ENV === 'development'){
     module.exports = {
         API_BASE_URL: 'http://localhost:8080'
