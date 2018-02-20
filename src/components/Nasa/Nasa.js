@@ -46,7 +46,10 @@ export class Nasa extends React.Component {
                             <br /><br />
                         </div>
                         <div className="nasa-section-right nasa-flex-padding">
-                            <div className="nasa-title-container"><p className="nasa-title">NASA Image of the Day</p></div><img className="nasa-title-container-end" src={require('../../images/title-container-end.png')} alt="graphic" />
+                            <div className="nasa-title-container">
+                                <p className="nasa-title">NASA Image of the Day</p>
+                            </div>
+                            <img className="nasa-title-container-end" src={require('../../images/title-container-end.png')} alt="graphic" />
                             { icon }
                             <img className="nasa-image" src={this.props.nasaImageUrl} 
                             onClick={() => this.handleNasaImage()}
