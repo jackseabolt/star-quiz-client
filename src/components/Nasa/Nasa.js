@@ -21,7 +21,6 @@ export class Nasa extends React.Component {
     }
 
     handleNasaImageHover() {
-        console.log("IT FIRED")
         this.setState({ imageHover: !this.state.imageHover })
     }
      
