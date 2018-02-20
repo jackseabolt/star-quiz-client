@@ -8,7 +8,7 @@ console.log(process.env)
 //     }  
 // } else {
     module.exports = {
-        API_BASE_URL: 'https://star-quizes-api.herokuapp.com'
+        API_BASE_URL: 'http://star-quizes-api.herokuapp.com'
     }
 // }
 
