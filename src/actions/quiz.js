@@ -1,4 +1,8 @@
+import {API_BASE_URL} from '../config';
+
 // REGULAR ACTIONS
+
+console.log("API: ", API_BASE_URL)
 
 export const SET_ALL_QUIZES = 'SET_ALL_QUIZES'; 
 export const setAllQuizes = quizes => ({
@@ -32,7 +36,8 @@ export const toggleNasaImage = () => ({
 // THUNK ACTIONS
 
 export const getAllQuizes = () => dispatch => {
-    return fetch('https://star-quizes-api.herokuapp.com/quiz/', 
+    console.log("IT FIRED")
+    return fetch(`${API_BASE_URL}/quiz/`, 
         {
             method: 'GET', 
         }
@@ -48,7 +53,7 @@ export const getAllQuizes = () => dispatch => {
 }; 
  
 export const getNewQuiz = title => dispatch => {
-    return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/question/new`, 
+    return fetch(`${API_BASE_URL}/quiz/${title}/question/new`, 
         {
             method: 'GET'
         }
@@ -66,14 +71,13 @@ export const getNewQuiz = title => dispatch => {
 }
 
 export const getNewQuestion = (title, sessionId) => dispatch => {
-    return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/question/${sessionId}`, 
+    return fetch(`${API_BASE_URL}/quiz/${title}/question/${sessionId}`, 
         {
             method: 'GET'
         }
     )
     .then(res => res.json())
     .then(quiz => {
-        console.log("HERE IS THE QUIZ", quiz)
         if(quiz.quizLength) {
             return dispatch(setCurrentQuizStatus(quiz))
         } else {
@@ -85,7 +89,7 @@ export const getNewQuestion = (title, sessionId) => dispatch => {
 
 export const answerQuiz = (title, answer, sessionId) => dispatch => {
     console.log(title, answer, sessionId)
-    return fetch(`https://star-quizes-api.herokuapp.com/quiz/${title}/answer/${sessionId}`, 
+    return fetch(`${API_BASE_URL}/quiz/${title}/answer/${sessionId}`, 
         {
             method: 'POST', 
             body: JSON.stringify({
@@ -98,7 +102,6 @@ export const answerQuiz = (title, answer, sessionId) => dispatch => {
     )
     .then(res => res.json())
     .then(quiz => {
-        console.log("HERE IS THE QUIZ", quiz)
         if(quiz.quizLength) {
             return dispatch(setCurrentQuizStatus(quiz))
         } else {
@@ -109,7 +112,7 @@ export const answerQuiz = (title, answer, sessionId) => dispatch => {
 }
 
 export const deleteSession = id => dispatch => {
-    return fetch(`https://star-quizes-api.herokuapp.com/session/${id}`, 
+    return fetch(`${API_BASE_URL}/session/${id}`, 
         {
             method: 'DELETE'
         }
