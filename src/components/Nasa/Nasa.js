@@ -40,7 +40,7 @@ export class Nasa extends React.Component {
                             <p className="global-header-lightback">Welcome!</p>
                             <p className="global-paragraph-lightback">StarQuiz is a place for space enthusiasts to collide! 
                             Please feel free to explore this site. We built it for you! Think you're a 
-                            space expert? Try one of our free quizes below!</p>
+                            space expert? Try one of our free quizzes below!</p>
                             <br /><br />
                         </div>
                         <div className="nasa-section-right nasa-flex-padding">
