@@ -1,8 +1,7 @@
 import React from 'react'; 
-import { connect } from 'react-redux'; 
 import './BoardHeader.css'; 
 
-export class BoardHeader extends React.Component {
+export default class BoardHeader extends React.Component {
     render() {
         return ( 
             <div className="board-header"> 
@@ -16,9 +15,5 @@ export class BoardHeader extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-
-});  
-
-export default connect(mapStateToProps)(BoardHeader); 
+ 
 
