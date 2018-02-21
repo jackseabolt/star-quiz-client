@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import './BoardPost.css'; 
 import { getNewQuiz } from '../../actions/quiz'; 
 
-export class BoardPost extends React.Component {
+export default class BoardPost extends React.Component {
 
     handlePostClick() {
-        console.log(this.props.quiz.id)
         this.props.dispatch(getNewQuiz(this.props.quiz.title))      
     }
 
@@ -19,9 +18,5 @@ export class BoardPost extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-    quizActive: state.answers.length > 0
-}); 
 
-export default connect(mapStateToProps)(BoardPost); 
 
