@@ -11,7 +11,6 @@ export class Nasa extends React.Component {
         }
     }
     
-    
     componentDidMount() {
         this.props.dispatch(getNasaImage())
     }
