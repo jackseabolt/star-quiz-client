@@ -6,7 +6,6 @@ import { getAllQuizes } from '../../actions/quiz';
 
 export class Board extends React.Component {
     componentDidMount() {
-        console.log("IT MOUNTED")
         this.props.dispatch(getAllQuizes()); 
     }
     
