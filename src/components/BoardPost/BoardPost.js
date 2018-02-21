@@ -1,8 +1,9 @@
 import React from 'react'; 
 import './BoardPost.css'; 
 import { getNewQuiz } from '../../actions/quiz'; 
+import { connect } from 'react-redux'; 
 
-export default class BoardPost extends React.Component {
+export class BoardPost extends React.Component {
 
     handlePostClick() {
         this.props.dispatch(getNewQuiz(this.props.quiz.title))      
@@ -16,6 +17,14 @@ export default class BoardPost extends React.Component {
         ); 
     }
 }
+
+
+const mapStateToProps = state => ({
+
+}); 
+
+export default connect(mapStateToProps)(BoardPost); 
+
 
 
 

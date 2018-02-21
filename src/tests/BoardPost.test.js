@@ -1,5 +1,5 @@
 import React from 'react'; 
-import BoardPost from '../components/BoardPost/BoardPost'; 
+import { BoardPost } from '../components/BoardPost/BoardPost'; 
 import { shallow } from 'enzyme'; 
 
 describe('BoardPost', () => {
