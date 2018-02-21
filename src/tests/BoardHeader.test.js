@@ -6,4 +6,4 @@ describe('BoardHeader', () => {
     it('renders without crashing', () => {
         shallow(<BoardHeader />)
     }); 
-}); 
+});
