@@ -4,6 +4,6 @@ import { shallow } from 'enzyme';
 
 describe('Board', () => {
     it('renders without crashing', () => {
-        shallow(<Board dispatch={() => {}} quizes={[]}/>)
+        shallow(<Board dispatch={() => {}} quizes={[]}/>);
     });
 }); 

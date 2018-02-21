@@ -4,6 +4,6 @@ import { shallow } from 'enzyme';
 
 describe('Footer', () => {
     it('renders without crashing', () => {
-        shallow(<Footer />)
+        shallow(<Footer />);
     }); 
 }); 

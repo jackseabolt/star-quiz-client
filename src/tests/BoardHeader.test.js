@@ -4,6 +4,6 @@ import BoardHeader from '../components/BoardHeader/BoardHeader';
 
 describe('BoardHeader', () => {
     it('renders without crashing', () => {
-        shallow(<BoardHeader />)
+        shallow(<BoardHeader />);
     }); 
 });

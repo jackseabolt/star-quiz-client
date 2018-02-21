@@ -1,8 +1,7 @@
 import React from 'react'; 
-import { connect } from 'react-redux'; 
 import './Welcome.css'; 
 
-export class Welcome extends React.Component {
+export default class Welcome extends React.Component {
     render() {
         return ( 
             <div className="welcome"> 
@@ -21,10 +20,4 @@ export class Welcome extends React.Component {
         )
     }
 }
-
-const mapStateToProps = state => ({
-
-}); 
-
-export default connect(mapStateToProps)(Welcome); 
 
