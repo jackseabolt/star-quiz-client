@@ -4,6 +4,6 @@ import { shallow } from 'enzyme';
 
 describe('Nasa', () => {
     it('renders without crashing', () => {
-        shallow(<Nasa dispatch={() => {}}/>)
+        shallow(<Nasa dispatch={() => {}}/>);
     }); 
 }); 
