@@ -31,16 +31,14 @@ export class Nasa extends React.Component {
         } 
         let icon = <i className={iconStyles.join(" ")}></i>
 
-
         return ( 
             <div className="nasa"> 
                 <div className="global-container">
                     <div className="nasa-flex">
                         <div className="nasa-section-left nasa-flex-grey">
                             <p className="global-header-lightback">Welcome!</p>
-                            <p className="global-paragraph-lightback">StarQuiz is a place for space enthusiasts to collide! 
-                            Please feel free to explore this site. We built it for you! Think you're a 
-                            space expert? Try one of our free quizzes below!</p>
+                            <p className="global-paragraph-lightback">StarQuiz is an application for testing your 
+                            knowledge of the Solar System! Think you're a space expert? Try one of our free quizzes below!</p>
                             <br /><br />
                         </div>
                         <div className="nasa-section-right nasa-flex-padding">
