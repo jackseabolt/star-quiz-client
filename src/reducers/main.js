@@ -1,4 +1,5 @@
 import { SET_ALL_QUIZES, SET_CURRENT_QUIZ_STATUS, CLEAR_QUIZ, SET_NASA_IMAGE, TOGGLE_NASA_IMAGE } from '../actions/quiz'; 
+import { TOGGLE_INFO } from '../actions/functional'; 
 
 const initialState = {
     quizes: null,
@@ -15,7 +16,8 @@ const initialState = {
     nasaImageUrl: null, 
     nasaImageExplanation: null, 
     nasaImageTitle: null, 
-    usingNasaPhoto: false
+    usingNasaPhoto: false, 
+    infoOn: false
 }
 
 export default function mainReducer(state = initialState, action) {
@@ -51,7 +53,8 @@ export default function mainReducer(state = initialState, action) {
             continue: true, 
             quizLength: null, 
             score: null, 
-            currentIndex: null
+            currentIndex: null, 
+            infoOn: true 
         })
     }
     else if (action.type === SET_NASA_IMAGE) {
@@ -64,6 +67,11 @@ export default function mainReducer(state = initialState, action) {
     else if (action.type === TOGGLE_NASA_IMAGE) {
         return Object.assign({}, state, {
             usingNasaPhoto: !state.usingNasaPhoto
+        })
+    }
+    else if (action.type === TOGGLE_INFO) {
+        return Object.assign({}, state, {
+            infoOn: !state.infoOn
         })
     }
     return state;
