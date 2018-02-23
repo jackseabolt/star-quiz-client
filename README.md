@@ -1,5 +1,5 @@
 
-
+<img src="https://travis-ci.org/jackseabolt/star-quizes-client.svg?branch=master" alt="build:started">
 <h1>StarQuiz</h1>
 
 Why StarQuiz?
@@ -17,14 +17,15 @@ How it Works
       <img src="/src/images/readme1.png" max-height="240px" width="auto">
     </td>
   </tr>
-  <!-- <tr>
+  <tr>
     <td>
-      <p</p>
+      <p>Check out the image of the day from NASA's API</p>
     </td>
     <td>
-      <img src="/img/buzz-kill-addpatron.png" max-height="240px" witdh="auto">
+      <img src="/src/images/readme2.png" max-height="240px" witdh="auto">
     </td>
   </tr>
+  <!-- 
   <tr>
     <td>
       <p>The large numbers and color coding make the patron tile easy to understand.  Additionl information available includes seat location, time of stay, and a graphic representation of drink purchases.</p>
