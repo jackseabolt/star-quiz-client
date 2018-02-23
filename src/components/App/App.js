@@ -32,7 +32,7 @@ export class App extends Component {
         <Header />
         <Welcome />
         <Nasa />
-        <BoardHeader />
+        {/* <BoardHeader /> */}
         <Board />
         <Route exact path="/quiz" component={Quiz} />
         <Footer />
