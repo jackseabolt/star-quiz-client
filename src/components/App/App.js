@@ -7,7 +7,6 @@ import Quiz from '../Quiz/Quiz';
 import Nasa from '../Nasa/Nasa';
 import NasaPhoto from '../NasaPhoto/NasaPhoto';
 import Welcome from '../Welcome/Welcome';
-import BoardHeader from '../BoardHeader/BoardHeader';
 import {Route, withRouter} from 'react-router-dom';
 import './App.css';
 
