@@ -49,7 +49,7 @@ For local use
 
 ```bash
 # Clone repository
-git clone https://github.com/jackseabolt/star-quizes-client.git
+git clone https://github.com/jackseabolt/star-quiz-client.git
 
 # Change directory
 cd star-quizes-client
