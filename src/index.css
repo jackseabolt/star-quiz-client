@@ -37,6 +37,22 @@ body {
   line-height: 30px; 
 }
 
+.global-header-mini-darkback {
+  font-family: 'Oswald', sans-serif;
+  margin: 0px; 
+  color: white;  
+  font-size: 14px; 
+}
+
+.global-paragraph-mini-darkback {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px; 
+  color: rgb(255, 255, 255); 
+  font-size: 14px; 
+  margin-top: 15px;
+  line-height: 18px; 
+}
+
 
 /* TEXT FOR LIGHT BACKGROUNDS */
 
