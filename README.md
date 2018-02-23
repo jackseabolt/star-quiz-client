@@ -4,7 +4,7 @@
 
 Why StarQuiz?
 -------------
-StarQuiz is an application for testing your knowledge of the Solar System. Take quizes for each of the eight planets. 
+StarQuiz is an application for testing your knowledge of the Solar System. Try quizzes for each of the eight planets. 
 
 How it Works
 ------------
