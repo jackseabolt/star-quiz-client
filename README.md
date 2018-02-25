@@ -1,5 +1,5 @@
 
-<img src="https://travis-ci.org/jackseabolt/star-quizes-client.svg?branch=master" alt="build:started">
+<img src="https://travis-ci.org/jackseabolt/star-quiz-client.svg?branch=master" alt="build:passed">
 <h1>StarQuiz</h1>
 
 Why StarQuiz?
