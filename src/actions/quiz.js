@@ -33,11 +33,17 @@ export const toggleNasaImage = () => ({
     type: TOGGLE_NASA_IMAGE, 
 }); 
 
+export const QUIZ_LOADING = 'QUIZ_LOADING'; 
+export const quizLoading = boolean => ({ 
+    type: QUIZ_LOADING, 
+    quizLoading: boolean
+})
+
 
 // THUNK ACTIONS
 
 export const getAllQuizes = () => dispatch => {
-    console.log("IT FIRED")
+    dispatch(quizLoading(true)); 
     return fetch(`${API_BASE_URL}/quiz/`, 
         {
             method: 'GET', 
@@ -45,10 +51,12 @@ export const getAllQuizes = () => dispatch => {
     )
     .then(res => res.json())
     .then(quizes => {
-        return dispatch(setAllQuizes(quizes.quizes))
+        dispatch(setAllQuizes(quizes.quizes))
+        return dispatch(quizLoading(false));
     })
     .catch(err => {
         console.error(err); 
+        dispatch(quizLoading(false));
         return Promise.reject();  
     }); 
 }; 
