@@ -94,7 +94,6 @@ export const getNewQuestion = (title, sessionId) => dispatch => {
 }
 
 export const answerQuiz = (title, answer, sessionId) => dispatch => {
-    console.log(title, answer, sessionId)
     return fetch(`${API_BASE_URL}/quiz/${title}/answer/${sessionId}`, 
         {
             method: 'POST', 
