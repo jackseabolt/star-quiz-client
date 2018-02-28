@@ -13,6 +13,10 @@
     padding: 50px 0px; 
 }
 
+.board-loader {
+    text-align: center; 
+}
+
 @media screen and (max-width: 900px) {
     .board-container {
         width: 100%; 
