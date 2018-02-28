@@ -3,8 +3,6 @@ import {API_BASE_URL} from '../config';
 
 // REGULAR ACTIONS
 
-console.log("API: ", API_BASE_URL)
-
 export const SET_ALL_QUIZES = 'SET_ALL_QUIZES'; 
 export const setAllQuizes = quizes => ({
     type: SET_ALL_QUIZES, 
@@ -69,7 +67,6 @@ export const getNewQuiz = title => dispatch => {
     )
     .then(res => res.json())
     .then(quiz => {
-        console.log("HERE IS THE QUIZ", quiz)
         if(quiz.quizLength) {
             return dispatch(setCurrentQuizStatus(quiz))
         } else {
@@ -137,7 +134,6 @@ export const getNasaImage = () => dispatch => {
     })
     .then(res => res.json())
     .then(imageData => {
-        console.log(imageData)
         dispatch(setNasaImage(imageData))
     }); 
 }
