@@ -12,7 +12,6 @@ export class Board extends React.Component {
     
     render() {
         let boardPosts; 
-        console.log(this.props.quizLoading)
         if(this.props.quizLoading){ 
             boardPosts = <div className="board-loader">
                 <PulseLoader
