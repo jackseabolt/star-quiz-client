@@ -31,6 +31,18 @@ export class Nasa extends React.Component {
         } 
         let icon = <i className={iconStyles.join(" ")}></i>
 
+
+        let nasaImage; 
+        if(this.props.nasaImageUrl) {
+            nasaImage =  <img className="nasa-image" src={this.props.nasaImageUrl} 
+            onClick={() => this.handleNasaImage()}
+            onMouseEnter={()=> this.handleNasaImageHover()}
+            alt={this.props.nasaImageTitle}
+            />
+        } else {
+            nasaImage = <img className="nasa-image" src={require('../../images/backup.png')} alt="graphic" />
+        }
+
         return ( 
             <div className="nasa"> 
                 <div className="global-container">
@@ -47,11 +59,7 @@ export class Nasa extends React.Component {
                             </div>
                             <img className="nasa-title-container-end" src={require('../../images/title-container-end.png')} alt="graphic" />
                             { icon }
-                            <img className="nasa-image" src={this.props.nasaImageUrl} 
-                            onClick={() => this.handleNasaImage()}
-                            onMouseEnter={()=> this.handleNasaImageHover()}
-                            alt={this.props.nasaImageTitle}
-                            />
+                            { nasaImage }
                         </div>
                     </div>
                 </div>
@@ -60,8 +68,15 @@ export class Nasa extends React.Component {
     }
 }
 
+function checkURL(url) {
+    if(!url) {
+        return false; 
+    }
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
+}
+
 const mapStateToProps = state => ({
-    nasaImageUrl: state.nasaImageUrl, 
+    nasaImageUrl: checkURL(state.nasaImageUrl) ? state.nasaImageUrl : false, 
     nasaImageExplanation: state.nasaImageExplanation, 
     nasaImageTitle: state.nasaImageTitle
 }); 

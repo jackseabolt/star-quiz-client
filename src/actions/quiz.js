@@ -1,6 +1,5 @@
 import {API_BASE_URL} from '../config';
 
-
 // REGULAR ACTIONS
 
 export const SET_ALL_QUIZES = 'SET_ALL_QUIZES'; 
