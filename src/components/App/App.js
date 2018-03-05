@@ -7,7 +7,6 @@ import Quiz from '../Quiz/Quiz';
 import Nasa from '../Nasa/Nasa';
 import NasaPhoto from '../NasaPhoto/NasaPhoto';
 import Welcome from '../Welcome/Welcome';
-import {Route, withRouter} from 'react-router-dom';
 import './App.css';
 
 export class App extends Component {
@@ -31,9 +30,7 @@ export class App extends Component {
         <Header />
         <Welcome />
         <Nasa />
-        {/* <BoardHeader /> */}
         <Board />
-        <Route exact path="/quiz" component={Quiz} />
         <Footer />
       </div>
     );
@@ -45,5 +42,5 @@ const mapStateToProps = state => ({
   usingNasaPhoto: state.usingNasaPhoto
 })
 
-export default withRouter(connect(mapStateToProps)(App)); 
+export default connect(mapStateToProps)(App); 
 
