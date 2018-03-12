@@ -1,5 +1,6 @@
 import React from 'react'; 
 import './Welcome.css'; 
+import { Transition } from 'react-transition-group'; 
 
 export default class Welcome extends React.Component {
     constructor(props) {
@@ -51,6 +52,19 @@ export default class Welcome extends React.Component {
     }
 
     render() {
+        const duration = 400; 
+        const defaultStyle = {
+            opacity: 0, 
+            marginLeft: 'auto', 
+            marginRight: 'auto', 
+            transition: `opacity ${duration}ms ease-in-out`
+        }
+
+        const transitionStyles = {
+            entering: { opacity: 0 }, 
+            entered: { opacity: 1 }
+        }
+
         return ( 
             <div className="welcome"> 
                 <div className="video-background">
@@ -58,11 +72,20 @@ export default class Welcome extends React.Component {
                         <iframe title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0" allowFullScreen></iframe>
                     </div>
                 </div>
-                <div className="welcome-title-container">
-                <h1 className="welcome-title">{this.state.quotes[this.state.quoteKey].quote1}<br />
-                {this.state.quotes[this.state.quoteKey].quote2}</h1>
-                <h3 className="welcome-title-sub">{this.state.quotes[this.state.quoteKey].author}</h3>
-                </div>
+
+                <Transition in={true} timeout={duration} appear={true}>
+                    {(state) => (
+                        <div style={{ 
+                            ...defaultStyle,
+                            ...transitionStyles[state]
+                        }}>
+                            <h1 className="welcome-title">{this.state.quotes[this.state.quoteKey].quote1}<br />
+                            {this.state.quotes[this.state.quoteKey].quote2}</h1>
+                            <h3 className="welcome-title-sub">{this.state.quotes[this.state.quoteKey].author}</h3>
+                        </div>
+                    )}
+                </Transition>
+
             </div>
         )
     }
