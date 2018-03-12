@@ -40,7 +40,6 @@ export class Quiz extends React.Component {
     
     render() {  
 
-
         // Transition styles
 
         const duration = 300; 
