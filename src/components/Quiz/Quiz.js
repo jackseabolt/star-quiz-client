@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
-import { Redirect } from 'react-router-dom'; 
+import { Redirect } from 'react-router-dom';
+import { Transition } from 'react-transition-group';  
 import { answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz'; 
 import Score from '../Score/Score'; 
 import './Quiz.css'; 
@@ -38,6 +39,33 @@ export class Quiz extends React.Component {
     }
     
     render() {  
+
+
+        // Transition styles
+
+        const duration = 300; 
+        const defaultStyle = {
+            opacity: 0, 
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            height: '100%', 
+            width: '100%', 
+            margin: '0px', 
+            zIndex: 20, 
+            top: '0px', 
+            bottom: '0px', 
+            left: '0px', 
+            right: '0px', 
+            position: 'fixed',
+            display: 'flex', 
+            alignItems: 'center', 
+            transition: `opacity ${duration}ms ease-in-out`
+        }
+
+        const transitionStyles = {
+            entering: { opacity: 0 }, 
+            entered: { opacity: 1 }
+        }
+
 
         // Response text colors
         const responseClasses = [];
@@ -91,14 +119,22 @@ export class Quiz extends React.Component {
         // Is quiz activated? 
         if (this.props.usingQuiz) {
             return ( 
-                <div className="quiz-backdrop">
-                    <div className="quiz-main">
-                        <div className="quiz-close" onClick={() => this.handleClose()}>
-                            <i className="fas fa-times quiz-close-icon"></i>
+                <Transition in={true} timeout={duration} appear={true}>
+                    {(state) => (
+                            <div style={{ 
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                    }}>
+                    {/* <div className="quiz-backdrop"> */}
+                        <div className="quiz-main">
+                            <div className="quiz-close" onClick={() => this.handleClose()}>
+                                <i className="fas fa-times quiz-close-icon"></i>
+                            </div>
+                            { content } 
                         </div>
-                        { content } 
                     </div>
-                </div>
+                )}
+                </Transition >
             )  
         } 
         else {

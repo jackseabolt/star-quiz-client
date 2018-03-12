@@ -17,7 +17,7 @@
     line-height: 22px; 
 }
 
-.quiz-backdrop {
+/* .quiz-backdrop {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%; 
     width: 100%; 
@@ -30,7 +30,7 @@
     position: fixed;
     display: flex; 
     align-items: center; 
-}
+} */
 
 .quiz-question {
     margin-bottom: 10px; 
