@@ -43,10 +43,5 @@ export class Board extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-    quizes: state.quizes? state.quizes : [],
-    quizLoading: state.quizLoading 
-}); 
-
-export default connect(mapStateToProps)(Board); 
+export default connect()(Board); 
 
