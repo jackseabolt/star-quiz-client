@@ -59,6 +59,7 @@ export const getAllQuizes = () => dispatch => {
 }; 
  
 export const getNewQuiz = title => dispatch => {
+    console.log(title)
     return fetch(`${API_BASE_URL}/quiz/${title}/question/new`, 
         {
             method: 'GET'

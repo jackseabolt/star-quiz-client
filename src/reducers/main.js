@@ -13,7 +13,7 @@ const initialState = {
     score: null, 
     quizLength: null, 
     currentIndex: null,
-    nasaImageUrl: null, 
+    nasaImageUrl: false, 
     nasaImageExplanation: null, 
     nasaImageTitle: null, 
     usingNasaPhoto: false, 
