@@ -1,7 +1,6 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
-import './Board.css'; 
-import BoardPost from '../BoardPost/BoardPost';  
+import './Board.css';  
 import { getAllQuizes, getNewQuiz } from '../../actions/quiz'; 
 import { PulseLoader} from 'react-spinners';
 
