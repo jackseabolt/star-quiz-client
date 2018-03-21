@@ -37,10 +37,10 @@ export class Nasa extends React.Component {
             nasaImage =  <img className="nasa-image" src={this.props.nasaImageUrl} 
             onClick={() => this.handleNasaImage()}
             onMouseEnter={()=> this.handleNasaImageHover()}
-            alt={this.props.nasaImageTitle}
-            />
+            alt={this.props.nasaImageTitle} />
         } else {
-            nasaImage = <img className="nasa-image" src={require('../../images/backup.png')} alt="graphic" />
+            <div className="nasa-loading"></div>
+            // nasaImage = <img className="nasa-image" src={require('../../images/backup.png')} alt="graphic" />
         }
 
         return ( 

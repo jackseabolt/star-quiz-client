@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import './Board.css'; 
 import BoardPost from '../BoardPost/BoardPost';  
-import { getAllQuizes } from '../../actions/quiz'; 
+import { getAllQuizes, getNewQuiz } from '../../actions/quiz'; 
 import { PulseLoader} from 'react-spinners';
 
 export class Board extends React.Component {
@@ -11,24 +11,47 @@ export class Board extends React.Component {
     }
     
     render() {
-        let boardPosts; 
-        if(this.props.quizLoading){ 
-            boardPosts = <div className="board-loader">
-                <PulseLoader
-                    color={'#fff'} 
-                    loading={true} 
-                />
-            </div>
-        } else {
-            boardPosts = this.props.quizes.map((quiz, index) => (
-                <BoardPost key={index} quiz={quiz} />
-            ))
-        }   
+        // let boardPosts; 
+        // if(this.props.quizLoading){ 
+        //     boardPosts = <div className="board-loader">
+        //         <PulseLoader
+        //             color={'#fff'} 
+        //             loading={true} 
+        //         />
+        //     </div>
+        // } else {
+        //     boardPosts = this.props.quizes.map((quiz, index) => (
+        //         <BoardPost key={index} quiz={quiz} />
+        //     ))
+        // }   
 
         return ( 
             <div className="board"> 
                 <div className="board-container">
-                    { boardPosts }
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Mercury'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/mercury.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Venus'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/venus.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Earth'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/earth.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Mars'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/mars.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Jupiter'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/jupiter.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Saturn'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/saturn.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Uranus'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/uranus.jpg')} />
+                    </div>
+                    <div className="board-post" onClick={() => this.props.dispatch(getNewQuiz('Neptune'))}> 
+                        <img className="board-post-image" alt="planet" src={require('../../images/neptune.png')} />
+                    </div>
                 </div>
             </div>
         )
