@@ -25,23 +25,23 @@
 
 .welcome-title {
   color: white; 
-  font-family: 'Bree Serif', serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center; 
-  font-size: 40px;  
-  line-height: 40px;
+  font-size: 43px;  
+  line-height: 50px;
   margin-top: 90px; 
-  padding: 0px 0px;
-  text-shadow: 0px 0px 2px black;  
+  padding: 0px 50px;
+  text-shadow: 0px 0px 20px black;  
 }
 
 .welcome-title-sub {
   color: white; 
-  font-family: 'Bree Serif', serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center; 
-  font-size: 30px;  
+  font-size: 33px;  
   margin: 0px; 
   padding: 0px; 
-  text-shadow: 0px 0px 1px rgb(53, 53, 53); 
+  text-shadow: 0px 0px 20px black; 
 }
 
 * { box-sizing: border-box; }
@@ -88,9 +88,9 @@
 @media screen and (max-width: 700px) {
   .welcome-title {
     font-size: 30px;  
-    line-height: 30px;
+    line-height: 35px;
   }
   .welcome-title-sub {
-    font-size: 20px;    
+    font-size: 25px;    
   }
 }
