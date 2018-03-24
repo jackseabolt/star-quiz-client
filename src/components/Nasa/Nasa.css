@@ -116,5 +116,31 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .nasa-title-container {
+        text-align: center; 
+        background-color: #363944; 
+        height: 45px;  
+        display: inline-block;
+        padding: 0px 10px 0px 20px;  
+        width: 200px;   
+        margin: 0px; 
+        position: relative; 
+        top: -18px; 
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .nasa-flex-padding {
+        padding-top: 0px;   
+    }
+    .nasa-title-container-end {
+        display: none; 
+    }
+    .nasa-title-container {
+       display: none;  
+    }
+}
+
 
 
