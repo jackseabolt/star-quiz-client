@@ -75,3 +75,28 @@
         width: 95%; 
     }
 }
+
+@media screen and (max-width: 560px) {
+    .footer-spacex-logo {
+        width: 300px;  
+        padding: 20px; 
+        position: relative; 
+        top: 0px; 
+        left: 20px;
+        margin-left: auto; 
+        margin-right: auto; 
+        cursor: pointer;  
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .footer {
+        padding: 70px 20px;   
+    }
+    .footer-spacex-logo {
+        width: 200px;
+    }
+    .footer-esa-logo {
+        width: 200px;
+    } 
+}
