@@ -10,27 +10,27 @@ export default class Welcome extends React.Component {
                 {
                     quote1: "\"The Universe is under no obligation",
                     quote2: "to make sense to you.\"",
-                    author: '~ Neil deGrasse Tyson'
+                    author: '- Neil deGrasse Tyson'
                 }, 
                 {
                     quote1: "\"Somewhere, something incredible",
                     quote2: "is waiting to be known.\"",
-                    author: '~ Carl Sagan'
+                    author: '- Carl Sagan'
                 }, 
                 {
                     quote1: "\"I know nothing with any certainty,",
                     quote2: "but the sight of the stars makes me dream.\"",
-                    author: '~ Vincent van Gogh'
+                    author: '- Vincent van Gogh'
                 }, 
                 {
                     quote1: "\"Astronomy compels the soul to look upward,",
                     quote2: "and leads us from this world to another.\"",
-                    author: '~ Plato'
+                    author: '- Plato'
                 }, 
                 {
                     quote1: "\"To confine our attention to terrestrial matters",
                     quote2: "would be to limit the human spirit.\"",
-                    author: '~ Steven Hawking'
+                    author: '- Steven Hawking'
                 }
             ], 
             quoteKey: 0
