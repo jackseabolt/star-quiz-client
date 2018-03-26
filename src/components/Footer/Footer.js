@@ -12,7 +12,6 @@ export default class Footer extends React.Component {
                     <a href="https://www.nasa.gov/">
                         <img className="footer-nasa-logo" src={require('../../images/NASA.png')} alt="logo" />
                     </a>
-                    
                     <a href="http://www.spacex.com/">
                         <img className="footer-spacex-logo" src={require('../../images/SpaceX.png')} alt="logo" />
                     </a>

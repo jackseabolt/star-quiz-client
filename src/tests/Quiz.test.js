@@ -5,5 +5,5 @@ import { shallow } from 'enzyme';
 describe('Quiz', () => {
     it('renders without crashing', () => {
         shallow(<Quiz usingQuiz={true} answers={[]}/>);
-    })
-})
+    }); 
+});
