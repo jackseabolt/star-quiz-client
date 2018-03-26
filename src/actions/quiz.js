@@ -8,6 +8,11 @@ export const setAllQuizes = quizes => ({
     quizes
 });
 
+export const START_QUIZ = 'START_QUIZ'; 
+export const startQuiz = () => ({
+    type: START_QUIZ
+});
+
 export const SET_CURRENT_QUIZ_STATUS = 'SET_CURRENT_QUIZ_STATUS'; 
 export const setCurrentQuizStatus = quiz => ({
     type: SET_CURRENT_QUIZ_STATUS, 
