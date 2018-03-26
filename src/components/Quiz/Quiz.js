@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import { Redirect } from 'react-router-dom';
 import { Transition } from 'react-transition-group';  
-import { answerQuiz, deleteSession, getNewQuestion  } from '../../actions/quiz'; 
+import { answerQuiz, deleteSession, getNewQuestion, startQuiz  } from '../../actions/quiz'; 
 import Score from '../Score/Score'; 
 import './Quiz.css'; 
 
@@ -17,7 +17,7 @@ export class Quiz extends React.Component {
     }
 
     handleStart() {
-        this.setState({started: true})
+        this.props.dispatch(startQuiz())
     }
     
     handleClose() {
@@ -64,7 +64,6 @@ export class Quiz extends React.Component {
             entered: { opacity: 1 }
         }
 
-
         // Response text colors
         const responseClasses = [];
         if (this.props.response) {
@@ -94,9 +93,8 @@ export class Quiz extends React.Component {
         }
 
         // content - is quiz started? 
-
         let content; 
-        if(this.state.started) {
+        if(this.props.started) {
             content = <div>
                 <h2 className="quiz-title">{this.props.title} Quiz</h2>
                     { correctAnswer }
@@ -152,7 +150,8 @@ const mapStateToProps = state => ({
     continue: state.continue, 
     quizLength: state.quizLength,
     score: state.score, 
-    currentIndex: state.currentIndex
+    currentIndex: state.currentIndex, 
+    started: state.started
 }); 
 
 export default connect(mapStateToProps)(Quiz); 
