@@ -20,12 +20,9 @@ export class Nasa extends React.Component {
         this.props.dispatch(toggleNasaImage())
     }
 
-    handleNasaImageHover() {
-        this.setState({ imageHover: !this.state.imageHover })
-    }
-
     render() {
 
+        // styles for fade-in transition
         const duration = 1000;
         const defaultStyle = {
             opacity: 0,
@@ -36,18 +33,11 @@ export class Nasa extends React.Component {
             entered: { opacity: 1 }
         }
 
-        let iconStyles = ['fas', 'fa-search-plus', 'nasa-enlarge-icon'];
-        if (this.state.imageHover) {
-            iconStyles.push('show');
-        }
-        let icon = <i className={iconStyles.join(" ")}></i>
-
-
+        // controls image display as data is retrieved
         let nasaImage;
         if (this.props.nasaImageUrl) {
             nasaImage = <img className="nasa-image" src={this.props.nasaImageUrl}
                 onClick={() => this.handleNasaImage()}
-                onMouseEnter={() => this.handleNasaImageHover()}
                 alt={this.props.nasaImageTitle} />
         } else {
             nasaImage = <div className="nasa-loading"></div>
@@ -75,7 +65,6 @@ export class Nasa extends React.Component {
                                         <p className="nasa-title">NASA Image of the Day</p>
                                     </div>
                                     <img className="nasa-title-container-end" src={require('../../images/title-container-end.png')} alt="graphic" />
-                                    {icon}
                                     {nasaImage}
                                 </div>
                             </div>
