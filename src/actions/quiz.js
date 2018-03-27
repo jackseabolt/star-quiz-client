@@ -1,4 +1,5 @@
 import {REACT_APP_API_URL} from '../config';
+import 'whatwg-fetch'; 
 
 // REGULAR ACTIONS
 
