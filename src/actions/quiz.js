@@ -1,4 +1,4 @@
-import {API_BASE_URL} from '../config';
+import {REACT_APP_API_URL} from '../config';
 
 // REGULAR ACTIONS
 
@@ -46,7 +46,7 @@ export const quizLoading = boolean => ({
 
 export const getAllQuizes = () => dispatch => {
     dispatch(quizLoading(true)); 
-    return fetch(`${API_BASE_URL}/quiz/`, 
+    return fetch(`${REACT_APP_API_URL}/quiz/`, 
         {
             method: 'GET', 
         }
@@ -65,7 +65,7 @@ export const getAllQuizes = () => dispatch => {
  
 export const getNewQuiz = title => dispatch => {
     console.log(title)
-    return fetch(`${API_BASE_URL}/quiz/${title}/question/new`, 
+    return fetch(`${REACT_APP_API_URL}/quiz/${title}/question/new`, 
         {
             method: 'GET'
         }
@@ -82,7 +82,7 @@ export const getNewQuiz = title => dispatch => {
 }
 
 export const getNewQuestion = (title, sessionId) => dispatch => {
-    return fetch(`${API_BASE_URL}/quiz/${title}/question/${sessionId}`, 
+    return fetch(`${REACT_APP_API_URL}/quiz/${title}/question/${sessionId}`, 
         {
             method: 'GET'
         }
@@ -99,7 +99,7 @@ export const getNewQuestion = (title, sessionId) => dispatch => {
 }
 
 export const answerQuiz = (title, answer, sessionId) => dispatch => {
-    return fetch(`${API_BASE_URL}/quiz/${title}/answer/${sessionId}`, 
+    return fetch(`${REACT_APP_API_URL}/quiz/${title}/answer/${sessionId}`, 
         {
             method: 'POST', 
             body: JSON.stringify({
@@ -122,7 +122,7 @@ export const answerQuiz = (title, answer, sessionId) => dispatch => {
 }
 
 export const deleteSession = id => dispatch => {
-    return fetch(`${API_BASE_URL}/session/${id}`, 
+    return fetch(`${REACT_APP_API_URL}/session/${id}`, 
         {
             method: 'DELETE'
         }
