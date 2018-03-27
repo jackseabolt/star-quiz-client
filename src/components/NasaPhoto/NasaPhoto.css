@@ -74,3 +74,9 @@
     margin: 0px; 
     width: 100%;   
 }
+
+@media screen and (max-width: 1000px) {
+    .nasa-photo-info-icon {
+        display: none; 
+    }
+}
