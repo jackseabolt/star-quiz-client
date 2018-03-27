@@ -8,7 +8,7 @@ import {
 } from '../actions/quiz'; 
 import { TOGGLE_INFO } from '../actions/functional'; 
 
-const initialState = {
+export const initialState = {
     quizes: null,
     answers: [], 
     currentQuestion: null, 
@@ -68,7 +68,7 @@ export default function mainReducer(state = initialState, action) {
             quizLength: null, 
             score: null, 
             currentIndex: null, 
-            infoOn: true, 
+            infoOn: false, 
             started: false 
         });
     }
