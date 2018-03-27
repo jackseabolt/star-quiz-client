@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
         return ( 
             <div className="footer"> 
                 <div className="footer-container-top">
-                    <p className="footer-paragraph">We're great, but so are these guys! Be sure to visit their websites for more space news.</p>
+                    <p className="footer-paragraph">Be sure to visit these websites for more space news!</p>
                 </div>
                 <div className="footer-container">
                     <a href="https://www.nasa.gov/">
