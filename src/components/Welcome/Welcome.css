@@ -3,6 +3,7 @@
     height: 500px;
     display: flex; 
     align-items: center; 
+    overflow: hidden; 
 }
 
 .welcome-title-container {
@@ -106,6 +107,7 @@
   #welcome-mobile {
     display: block;
     z-index: -2; 
-    position: absolute;   
+    position: absolute;
+    width: 100%;    
   }
 }
