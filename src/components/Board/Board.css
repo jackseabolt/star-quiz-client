@@ -59,7 +59,15 @@
 
 @media screen and (max-width: 500px) {
     .board-post {
-        width: 100%; 
+        width: 70%; 
+        margin: auto;
+        flex: 1;  
+    }
+    .board-container {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        flex-direction: column;   
     }
 }
 

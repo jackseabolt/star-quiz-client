@@ -68,9 +68,15 @@ export default class Welcome extends React.Component {
         return ( 
             <div className="welcome"> 
                 <div className="video-background">
-                    <div className="video-foreground">
+
+
+
+                    <div id="banner" className="video-foreground">
                         <iframe title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0" allowFullScreen></iframe>
                     </div>
+
+
+
                 </div>
 
                 <Transition in={true} timeout={duration} appear={true}>
