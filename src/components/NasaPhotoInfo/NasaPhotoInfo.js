@@ -13,7 +13,7 @@ export class NasaPhotoInfo extends React.Component {
         return (
             <div className="nasa-photo-info-container">
                 <div className="nasa-photo-info-close" onClick={() => this.handleClose()}>
-                    <i className="fas fa-times nasa-photo-info-close-icon"></i>
+                    <i className="far fa-window-close nasa-photo-info-close-icon"></i>
                 </div>
                 <h4 className="global-paragraph-mini-darkback">{this.props.nasaImageTitle}</h4>
                 <p className="global-paragraph-mini-darkback">{this.props.nasaImageExplanation}</p>

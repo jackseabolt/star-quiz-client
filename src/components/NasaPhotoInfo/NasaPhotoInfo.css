@@ -1,7 +1,7 @@
 .nasa-photo-info-container { 
     position: absolute; 
-    top: 0px; 
-    padding: 50px;
+    top: 5%; 
+    padding: 50px 70px 50px 50px;
     width: 50%; 
     background-color: rgba(0, 0, 0, 0.7);  
 }
@@ -11,12 +11,11 @@
 }
 
 .nasa-photo-info-close {
-    float: right; 
     opacity: 0.6; 
     font-size: 20px; 
-    position: relative; 
-    top: -10px; 
-    right: 10px; 
+    position: absolute; 
+    bottom: 30px; 
+    right: 30px; 
     transition: 0.3s; 
     cursor: pointer;
 }
@@ -25,8 +24,8 @@
     opacity: 0.8; 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .nasa-photo-info-container { 
-        width: 80%;   
+        display: none;   
     }
 }
