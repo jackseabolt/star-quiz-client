@@ -1,12 +1,13 @@
 .footer {
     width: 100%; 
     background-color: rgb(20, 20, 20); 
-    margin-bottom: none; 
-    padding: 70px 30px;   
+    margin-bottom: none;
+    margin-top: 200px;  
+    padding: 100px 30px;   
 }
 
 .footer-nasa-logo {
-    width: 200px;  
+    width: 190px;  
     padding: 30px;
     margin-left: auto; 
     margin-right: auto;
@@ -14,7 +15,7 @@
 }
 
 .footer-spacex-logo {
-    width: 300px;  
+    width: 280px;  
     padding: 30px; 
     position: relative; 
     top: -47px; 
@@ -25,7 +26,7 @@
 }
 
 .footer-esa-logo {
-    width: 270px;  
+    width: 250px;  
     padding: 30px; 
     position: relative;  
     margin-left: auto; 
@@ -39,7 +40,7 @@
     margin-left: auto; 
     margin-right: auto; 
     max-width: 1500px; 
-    width: 80%; 
+    width: 60%; 
     text-align: center;   
 }
 
@@ -61,9 +62,6 @@
 }
 
 @media screen and (max-width: 900px) {
-    .footer-container {
-        width: 100%; 
-    } 
     .footer-container-top {
         width: 80%; 
     }
@@ -71,6 +69,9 @@
 
 
 @media screen and (max-width: 700px) {
+    .footer-container {
+        width: 90%; 
+    } 
     .footer-container-top {
         width: 95%; 
     }
