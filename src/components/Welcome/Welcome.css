@@ -107,7 +107,7 @@
   #welcome-mobile {
     display: block;
     z-index: -2; 
-    position: absolute;
+    position: fixed;
     width: 100%; 
     margin-top: 50px;    
   }
