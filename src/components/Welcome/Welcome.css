@@ -34,6 +34,10 @@
   text-shadow: 0px 0px 20px black;  
 }
 
+#welcome-mobile {
+  display: none; 
+}
+
 .welcome-title-sub {
   color: white; 
   font-family: 'Damion', cursive;
@@ -92,5 +96,16 @@
   }
   .welcome-title-sub {
     font-size: 35px;    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #welcome-video {
+    display: none; 
+  }
+  #welcome-mobile {
+    display: block;
+    z-index: -20; 
+    position: absolute;   
   }
 }
