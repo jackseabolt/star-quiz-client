@@ -20,10 +20,5 @@ describe('Welcome', () => {
         const wrapper = mount(<Welcome />); 
         wrapper.instance().changeKey(); ; 
         expect(wrapper.state().quoteKey).toEqual(1); 
-    }); 
-    it('contains video container with .video-foreground', () => {
-        const wrapper = shallow(<Welcome />); 
-        const target = wrapper.find('.video-foreground'); 
-        expect(target.exists()).toEqual(true);
-    }); 
+    });  
 }); 
