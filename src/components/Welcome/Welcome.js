@@ -69,11 +69,15 @@ export default class Welcome extends React.Component {
             <div className="welcome"> 
                 <img id="welcome-mobile" src={require('../../images/mobile_background.jpg')} alt="background" />
                 <div className="video-background">
-
-                    <div id="banner" className="video-foreground">
-                        <iframe id="welcome-video" title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0" allowFullScreen></iframe>
-                    </div>
-
+                    <Transition in={true} timeout={1000} appear={true}>
+                        {(state) => (
+                            <div id="banner" className="video-foreground" style={{ 
+                                ...transitionStyles[state]
+                            }}>
+                            <iframe id="welcome-video" title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0" allowFullScreen></iframe>
+                        </div>
+                        )}
+                    </Transition>
                 </div>
 
                 <Transition in={true} timeout={duration} appear={true}>
