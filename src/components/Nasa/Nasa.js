@@ -42,7 +42,7 @@ export class Nasa extends React.Component {
                 alt={this.props.nasaImageTitle} />
             } else {
                 nasaImage = <img className="nasa-image-backup" src={require('../../images/backup.png')}
-                alt="NASA Image of the Day" />
+                alt="NASA" />
             }
         } else {
             nasaImage = <div className="nasa-loading"></div>
