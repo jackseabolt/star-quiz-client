@@ -36,9 +36,14 @@ export class Nasa extends React.Component {
         // controls image display as data is retrieved
         let nasaImage;
         if (this.props.nasaImageUrl) {
-            nasaImage = <img className="nasa-image" src={this.props.nasaImageUrl}
+            if(checkURL(this.props.nasaImageUrl)) {
+                nasaImage = <img className="nasa-image" src={this.props.nasaImageUrl}
                 onClick={() => this.handleNasaImage()}
                 alt={this.props.nasaImageTitle} />
+            } else {
+                nasaImage = <img className="nasa-image-backup" src={require('../../images/backup.png')}
+                alt="NASA Image of the Day" />
+            }
         } else {
             nasaImage = <div className="nasa-loading"></div>
         }
@@ -85,7 +90,7 @@ function checkURL(url) {
 }
 
 const mapStateToProps = state => ({
-    nasaImageUrl: checkURL(state.nasaImageUrl) ? state.nasaImageUrl : false,
+    nasaImageUrl: state.nasaImageUrl ? state.nasaImageUrl : false,
     nasaImageExplanation: state.nasaImageExplanation,
     nasaImageTitle: state.nasaImageTitle
 });
