@@ -18,16 +18,23 @@ describe('Nasa', () => {
         const target = wrapper.find('.nasa-image'); 
         expect(target.exists()).toEqual(false); 
     }); 
-    it('displays image if image data is loaded', () => {
+    it('displays alternative image if image data is loaded with improper content', () => {
         const spy = jest.fn(); 
         const wrapper = mount(<Nasa dispatch={spy} nasaImageUrl={'myurl'} />);
+        wrapper.instance();
+        const target = wrapper.find('.nasa-image-backup'); 
+        expect(target.exists()).toEqual(true); 
+    }); 
+    it('displays image if image data is loaded with proper content', () => {
+        const spy = jest.fn(); 
+        const wrapper = mount(<Nasa dispatch={spy} nasaImageUrl={'myurl.png'} />);
         wrapper.instance();
         const target = wrapper.find('.nasa-image'); 
         expect(target.exists()).toEqual(true); 
     })
     it('dispatched action when image is clicked', () => {
         const spy = jest.fn(); 
-        const wrapper = mount(<Nasa dispatch={spy} nasaImageUrl={'myurl'} />);
+        const wrapper = mount(<Nasa dispatch={spy} nasaImageUrl={'myurl.png'} />);
         wrapper.instance(); 
         const image = wrapper.find('.nasa-image'); 
         image.simulate('click'); 
