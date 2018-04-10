@@ -87,6 +87,10 @@
 .vid-info .acronym { display: none; }
 }
 
+.video-blackout {
+  display: none; 
+}
+
 
 
 /* MOBILE STYLES */
