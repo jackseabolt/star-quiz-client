@@ -97,16 +97,3 @@ export default class Welcome extends React.Component {
         )
     }
 }
-
-let styles = "video-foreground"
-
-function parallax(){  
-    const ypos = window.pageYOffset; 
-    if(ypos > 420) {
-        styles = "video-blackout"
-    } else {
-        styles= "video-foreground"
-    }
-}
-
-window.addEventListener('scroll', parallax);
