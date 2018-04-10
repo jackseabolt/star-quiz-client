@@ -28,6 +28,7 @@ export class Quiz extends React.Component {
         event.preventDefault();
         if (this.props.correctAnswer && this.props.continue) {
             this.props.dispatch(getNewQuestion(this.props.title, this.props.sessionId)); 
+            this.removeRadio();
         }
         else if (this.props.continue) {
             const { answer } = this.form; 
@@ -35,6 +36,13 @@ export class Quiz extends React.Component {
         }
         else {
             this.props.dispatch(deleteSession(this.props.sessionId))
+        }
+    }
+
+    removeRadio() {
+        var allRadios = document.getElementsByName('answer');
+        for(let i = 0; i < allRadios.length; i++){
+            allRadios[i].checked = false;
         }
     }
     

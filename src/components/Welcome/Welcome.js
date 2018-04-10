@@ -98,8 +98,7 @@ export default class Welcome extends React.Component {
     }
 }
 
-
-function parallax(){  
+function hideBackground(){  
     let ypos = window.pageYOffset; 
     if(ypos > 420) {
         document.getElementById('banner').style.display = 'none'; 
@@ -108,4 +107,4 @@ function parallax(){
     }
 }
 
-window.addEventListener('scroll', parallax);
+window.addEventListener('scroll', hideBackground);
