@@ -99,7 +99,8 @@
 
 .nasa-flex-grey {
     background-color: rgb(233, 233, 233); 
-    padding: 50px; 
+    padding: 50px;
+    border-radius: 1px;  
 }
 
 @media screen and (max-width: 1200px) {
