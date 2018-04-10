@@ -97,3 +97,15 @@ export default class Welcome extends React.Component {
         )
     }
 }
+
+
+function parallax(){  
+    let ypos = window.pageYOffset; 
+    if(ypos > 420) {
+        document.getElementById('banner').style.display = 'none'; 
+    } else {
+        document.getElementById('banner').style.display = 'block'; 
+    }
+}
+
+window.addEventListener('scroll', parallax);
