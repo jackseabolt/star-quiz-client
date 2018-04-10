@@ -116,4 +116,11 @@
     width: 100%; 
     margin-top: 50px;    
   }
+  .welcome-title {
+    font-size: 25px;  
+    line-height: 35px;
+  }
+  .welcome-title-sub {
+    font-size: 30px;    
+  }
 }
