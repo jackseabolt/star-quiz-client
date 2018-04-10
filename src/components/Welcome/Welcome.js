@@ -71,7 +71,7 @@ export default class Welcome extends React.Component {
                 <div className="video-background">
                     <Transition in={true} timeout={1000} appear={true}>
                         {(state) => (
-                            <div id="banner" className={styles} style={{ 
+                            <div id="banner" className="video-foreground" style={{ 
                                 ...transitionStyles[state]
                             }}>
                             <iframe id="welcome-video" title="welcome" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0" allowFullScreen></iframe>
