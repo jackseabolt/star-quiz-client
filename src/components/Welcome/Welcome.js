@@ -30,7 +30,7 @@ export default class Welcome extends React.Component {
                 {
                     quote1: "\"To confine our attention to terrestrial matters",
                     quote2: "would be to limit the human spirit.\"",
-                    author: '- Steven Hawking'
+                    author: '- Stephen Hawking'
                 }
             ], 
             quoteKey: 0
