@@ -74,7 +74,7 @@ export default class Welcome extends React.Component {
                             <div id="banner" className="video-foreground" style={{ 
                                 ...transitionStyles[state]
                             }}>
-\                            <video loop autoPlay="autoplay">
+                            <video loop autoPlay>
                                 <source src={require('../../videos/background.mp4')} type="video/mp4" />
                             </video>
                         </div>
